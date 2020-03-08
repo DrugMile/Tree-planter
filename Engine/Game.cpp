@@ -42,4 +42,13 @@ void Game::UpdateModel()
 
 void Game::ComposeFrame()
 {
+	gfx.drawCircle(Coordinates{ 300,200 }, 40, Colors::Green);
+	gfx.drawCircle(Coordinates{ 200,100 }, 50, Colors::Magenta);
+	gfx.drawCircle(Coordinates{ 600,400 }, 70, Colors::White);
+	gfx.drawCircle(Coordinates{ 700,50 }, 70, Colors::Cyan);
+	gfx.drawCircle(Coordinates{ 400,400 }, 20, Colors::Yellow);
+	gfx.drawCircle(Coordinates{ 900,600 }, 100, Colors::LightGray);
+	gfx.drawCircle(Coordinates{ 300,200 }, 140, Colors::Red);
+	gfx.drawCircle(Coordinates{ 450,0 }, 50, Colors::Blue);
+
 }

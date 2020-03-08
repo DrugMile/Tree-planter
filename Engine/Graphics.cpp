@@ -316,6 +316,25 @@ void Graphics::PutPixel( int x,int y,Color c )
 	pSysBuffer[Graphics::ScreenWidth * y + x] = c;
 }
 
+void Graphics::drawCircle(Coordinates & position, int r, Color c)
+{
+	int x = position.x;
+	int y = position.y;
+	int xk, yk;
+	double k = 1.0 / r;
+	float o = 2 * pi;
+	for (double i = 0; i <= o; i += k)
+	{
+		xk = x + r * cos(i) + 0.5;
+		yk = y + r * sin(i) + 0.5;
+		if (xk < Graphics::ScreenWidth&&xk >= 0 && yk < Graphics::ScreenHeight&&yk >= 0)
+		{
+			PutPixel(xk, yk, c);
+		}
+		
+	}
+}
+
 
 //////////////////////////////////////////////////
 //           Graphics Exception
