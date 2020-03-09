@@ -23,7 +23,7 @@
 #include "Keyboard.h"
 #include "Mouse.h"
 #include "Graphics.h"
-
+#include "Tree.h"
 class Game
 {
 public:
@@ -42,5 +42,7 @@ private:
 	Graphics gfx;
 	/********************************/
 	/*  User Variables              */
+	Tree maple1;
+	Tree maple2;
 	/********************************/
 };

@@ -60,6 +60,7 @@ public:
 	}
 	void PutPixel( int x,int y,Color c );
 	void drawCircle(Coordinates& position, int r, Color c);
+	void drawTree(Coordinates& position, int r, Color c);
 	~Graphics();
 private:
 	Microsoft::WRL::ComPtr<IDXGISwapChain>				pSwapChain;

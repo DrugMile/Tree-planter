@@ -1,5 +1,6 @@
 #pragma once
 #include "Coordinates.h"
+#include "Graphics.h"
 class Tree
 {
 private:
@@ -12,7 +13,7 @@ private:
 	int color;
 public:
 	Tree(Coordinates& inPozicija);
-
+	void Draw(Graphics& gfx);
 	Coordinates getPosition();
 };
 
