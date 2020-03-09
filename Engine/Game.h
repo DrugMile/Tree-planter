@@ -37,6 +37,7 @@ private:
 	void UpdateModel();
 	/********************************/
 	/*  User Functions              */
+	void plantNew();
 	bool isMousePressed = false;
 	/********************************/
 private:
