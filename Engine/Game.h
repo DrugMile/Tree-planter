@@ -24,6 +24,7 @@
 #include "Mouse.h"
 #include "Graphics.h"
 #include "Tree.h"
+#include "Coordinates.h"
 class Game
 {
 public:
@@ -36,13 +37,14 @@ private:
 	void UpdateModel();
 	/********************************/
 	/*  User Functions              */
+	bool isMousePressed = false;
 	/********************************/
 private:
 	MainWindow& wnd;
 	Graphics gfx;
 	/********************************/
 	/*  User Variables              */
-	Tree maple1;
-	Tree maple2;
+	int lastTree = 0;
+	Tree trees[100];
 	/********************************/
 };

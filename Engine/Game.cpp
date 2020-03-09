@@ -25,9 +25,7 @@
 Game::Game(MainWindow& wnd)
 	:
 	wnd(wnd),
-	gfx(wnd),
-	maple1(Coordinates{ 100,100 }),
-	maple2(Coordinates{ 200,200 })
+	gfx(wnd)
 {
 }
 
@@ -41,6 +39,23 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+	if (wnd.mouse.LeftIsPressed())
+	{
+		if (!isMousePressed)
+		{
+			isMousePressed = true;
+			Coordinates mousePos(wnd.mouse.GetPosX(), wnd.mouse.GetPosY());
+			trees[lastTree].Plant(mousePos);
+			if (lastTree < 99)
+			{
+				lastTree++;
+			}
+		}
+	}
+	else
+	{
+		isMousePressed = false;
+	}
 }
 
 void Game::ComposeFrame()
@@ -54,6 +69,8 @@ void Game::ComposeFrame()
 	gfx.drawTree(Coordinates{ 300,200 }, 30, Colors::Red);
 	gfx.drawCircle(Coordinates{ 450,0 }, 50, Colors::Blue);
 	*/
-	maple1.Draw(gfx);
-	maple2.Draw(gfx);
+	for (int i = 0; i <= lastTree; i++)
+	{
+	trees[i].Draw(gfx);
+	}
 }
