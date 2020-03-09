@@ -11,7 +11,7 @@ void Tree::Plant(Coordinates & inPosition)
 	size = 0;
 	age = 0;
 }
-
+//
 Coordinates Tree::getPosition()
 {
 	return position;
