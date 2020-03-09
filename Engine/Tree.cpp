@@ -10,6 +10,7 @@ void Tree::Plant(Coordinates & inPosition)
 	position = inPosition;
 	size = 0;
 	age = 0;
+	isAlive = true;
 }
 //
 Coordinates Tree::getPosition()

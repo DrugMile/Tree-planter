@@ -12,9 +12,11 @@ private:
 	int age=0;
 	int maxAge=100*fps;
 	Color c = Colors::Blue;
+	
 public:
 	void Draw(Graphics& gfx);
 	void Plant(Coordinates& inPosition);
 	Coordinates getPosition();
+	bool isAlive = false;
 };
 

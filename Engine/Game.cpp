@@ -46,7 +46,10 @@ void Game::ComposeFrame()
 {
 	for (int i = 0; i <= lastTree; i++)
 	{
-	trees[i].Draw(gfx);
+		if (trees[i].isAlive)
+		{
+			trees[i].Draw(gfx);
+		}
 	}
 }
 
