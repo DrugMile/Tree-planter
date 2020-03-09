@@ -2,7 +2,8 @@
 
 void Tree::Draw(Graphics & gfx)
 {
-	gfx.drawTree(position, 50, Colors::Blue);
+	int radius = size / fps;
+	gfx.drawTree(position, radius, c);
 }
 
 void Tree::Plant(Coordinates & inPosition)
@@ -11,6 +12,21 @@ void Tree::Plant(Coordinates & inPosition)
 	size = 0;
 	age = 0;
 	isAlive = true;
+}
+void Tree::Update()
+{
+	age++;
+	size = growRate * age;
+	if (size > maxSize)
+	{
+		size = maxSize;
+		c = Colors::Green;
+	}
+	if (age > maxAge)
+	{
+		age = maxAge;
+		isAlive = false;
+	}
 }
 //
 Coordinates Tree::getPosition()

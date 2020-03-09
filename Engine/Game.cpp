@@ -40,6 +40,7 @@ void Game::Go()
 void Game::UpdateModel()
 {
 	plantNew();
+	updateTrees();
 }
 
 void Game::ComposeFrame()
@@ -72,5 +73,24 @@ void Game::plantNew()
 	else
 	{
 		isMousePressed = false;
+	}
+}
+
+void Game::updateTrees()
+{
+	/* grow only when SPACE is pressed?
+	if (wnd.kbd.KeyIsPressed(VK_SPACE))
+	{
+		for (int i = 0; i <= lastTree; i++)
+		{
+			trees[i].Update();
+		}
+	}
+	*/
+	{
+		for (int i = 0; i <= lastTree; i++)
+		{
+			trees[i].Update();
+		}
 	}
 }

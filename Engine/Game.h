@@ -38,6 +38,7 @@ private:
 	/********************************/
 	/*  User Functions              */
 	void plantNew();
+	void updateTrees();
 	bool isMousePressed = false;
 	/********************************/
 private:
