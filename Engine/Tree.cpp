@@ -8,6 +8,7 @@ void Tree::Draw(Graphics & gfx)
 
 void Tree::Plant(Coordinates & inPosition)
 {
+	c = Colors::Blue;
 	position = inPosition;
 	size = 0;
 	age = 0;
